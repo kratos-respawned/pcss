@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+.bgimg {
+    /* The image used */
+    background-image: url("bg.jpg");
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/* \\\\\\\\\\\\\\\\\\\\\\  NAVBAR  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.navbar
+{
+    width: 100%;
+
+    background-color: black;
+    line-height: 80px;
+    align-items: center;
+    text-align: center;
+}
+.navbar>#logo{
+   background-color: #ed0581;
+    color: white;
+}
+.navbar>#nmenu{
+    /* background-color: black; */
+    color: white;
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\  Body \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.intro{
+    
+    display: grid;
+    place-items: center;
+    width: 100%;
+  
+    color: white;
+}
+
+.intro>div{
+    padding-top: 2%;
+}
+
+.intro h1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 0, 128); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 0, 128); }
+  }
+
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\  MEDIA QUERY  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media (max-width:510px ) {
+  .intro>div{
+    margin-bottom:20px;
+  }
+  .intro>.one{
+    font-size: 3rem;
+  }
+  .intro>.two{
+    font-size: 2rem;
+  }
+  .intro .three{
+    font-size: 1rem;
+  }
+  h1{
+    font-size: 1rem;
+  }
+  
+}
+@media (min-width:510px){
+  .intro>div{
+    margin-bottom:4%;
+  }
+  .intro>.one{
+    font-size: 3.5rem;
+  }
+  .intro>.two{
+    font-size: 3rem;
+  }
+  .intro .three{
+    font-size: 2.5rem;
+  }
+ 
+}
+@media ( min-width:768px ) {
+    .navbar{
+        display: flex;
+    }
+    .navbar>#logo{
+    width: 33%;}
+    .navbar>#nmenu{
+        width:77%;
+    }
+    .intro>div{
+      margin-bottom:1%;
+    }
+    .intro>.one{
+      font-size: 5rem;
+    }
+    .intro>.two{
+      font-size: 4rem;
+    }
+    .intro .three{
+      font-size: 3.5rem;
+    }
+}
